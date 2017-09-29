@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Push Notification
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="deviceView" padding no-lines>
+    <ion-item>
+      <h2>{{deviceView.cordova}}</h2>
+      <p>Cordova</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.model}}</h2>
+      <p>Model</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.platform}}</h2>
+      <p>Platform</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.uuid}}</h2>
+      <p>UUID</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.version}}</h2>
+      <p>Version</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.manufacturer}}</h2>
+      <p>Manufacturer</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.isVirtual}}</h2>
+      <p>IsVirtual</p>
+    </ion-item>
+    <ion-item>
+      <h2>{{deviceView.serial}}</h2>
+      <p>Serial</p>
+    </ion-item>
+    <button ion-button block (click)="sendPushNotification()">Send Push Notification</button>
+  </ion-list>
+</ion-content>
